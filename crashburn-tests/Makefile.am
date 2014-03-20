@@ -37,7 +37,7 @@ AM_CXXFLAGS = \
 	-rdynamic \
 	-I$(top_srcdir)/crashburn-lib/include
 
-bin_PROGRAMS = \
+noinst_PROGRAMS = \
 	test_tga
 
 test_tga_SOURCES = \
@@ -47,7 +47,7 @@ test_tga_LDADD = \
 	$(top_builddir)/crashburn-lib/libcrashburn.la
 
 TESTS = \
-	${bin_PROGRAMS}
+	${noinst_PROGRAMS}
 
 MAINTAINERCLEANFILES = \
 	Makefile.in

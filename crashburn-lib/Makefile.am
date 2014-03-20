@@ -47,11 +47,21 @@ libcrashburn_la_SOURCES = \
 	$(top_srcdir)/crashburn-lib/src/loader/tga.cpp \
 	$(top_srcdir)/crashburn-lib/src/scene/scene.cpp
 
+engineincludedir = $(pkgincludedir)/engine
+loaderincludedir = $(pkgincludedir)/loader
+sceneincludedir = $(pkgincludedir)/scene
+
 pkginclude_HEADERS = \
-	$(top_srcdir)/crashburn-lib/include/crashburn/crashburn.h \
+	$(top_srcdir)/crashburn-lib/include/crashburn/crashburn.h
+
+engineinclude_HEADERS = \
 	$(top_srcdir)/crashburn-lib/include/crashburn/engine/engine.h \
-	$(top_srcdir)/crashburn-lib/include/crashburn/engine/static_text.h \
-	$(top_srcdir)/crashburn-lib/include/crashburn/scene/scene.h \
+	$(top_srcdir)/crashburn-lib/include/crashburn/engine/static_text.h
+
+sceneinclude_HEADERS = \
+	$(top_srcdir)/crashburn-lib/include/crashburn/scene/scene.h
+
+loaderinclude_HEADERS = \
 	$(top_srcdir)/crashburn-lib/include/crashburn/loader/loader.h \
 	$(top_srcdir)/crashburn-lib/include/crashburn/loader/tga.h
 
